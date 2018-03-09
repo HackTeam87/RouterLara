@@ -1,0 +1,4 @@
+section .content {
+    background-image: url("../bg/car.jpg");
+    background-size: cover;
+}

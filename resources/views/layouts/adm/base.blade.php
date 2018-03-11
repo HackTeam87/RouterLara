@@ -28,7 +28,7 @@
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue  sidebar-collapse ">
+<body class="hold-transition skin-blue  sidebar-mini ">
 <div class="wrapper">
 
 

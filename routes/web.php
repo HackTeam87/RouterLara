@@ -12,12 +12,7 @@
 */
 
 
-Route::group(['prefix' => 'adm'], function () {
-    Route::resource('/my','Adm\\AdminController');
-    Route::resource('/router','Adm\\NetworkController');
-    Route::resource('/sli','Adm\\SliderController');
-    Route::resource('/iptv','Adm\\IptvController');
-});
+
 
 Route::resource('/', 'Adm\\MenuController');
 
@@ -25,6 +20,13 @@ Route::resource('/', 'Adm\\MenuController');
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
+
+    Route::group(['prefix' => 'adm'], function () {
+        Route::resource('/my','Adm\\AdminController');
+        Route::resource('/router','Adm\\NetworkController');
+        Route::resource('/sli','Adm\\SliderController');
+        Route::resource('/iptv','Adm\\IptvController');
+    });
 
 });
 

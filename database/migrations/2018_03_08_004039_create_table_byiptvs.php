@@ -15,17 +15,17 @@ class CreateTableByiptvs extends Migration
     {
         Schema::create('byiptvs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('model',70);
-            $table->string('producer',70);
-            $table->string('type',70);
-            $table->string('processor',70);
-            $table->string('storage',70);
-            $table->string('wifi',70);
-            $table->string('interface',70);
-            $table->string('compozit',70);
-            $table->string('usb',70);
+            $table->string('model',170)->nullable();
+            $table->string('producer',170)->nullable();
+            $table->string('type',170)->nullable();
+            $table->string('processor',170)->nullable();
+            $table->string('storage',170)->nullable();
+            $table->string('wifi',170)->nullable();
+            $table->string('interface',170)->nullable();
+            $table->string('compozit',170)->nullable();
+            $table->string('usb',170)->nullable();
             $table->string('images',100)->nullable();
-            $table->decimal('price', 5, 2)->nullable();
+            $table->integer('price', 150)->nullable();
             $table->integer('category_id')->nullable();
             $table->timestamps();
         });

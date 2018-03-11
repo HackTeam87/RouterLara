@@ -40,7 +40,7 @@
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="col-md-6 services-grids w3layouts-grids">
+                        <div class="col-md-6  col-sm-12 services-grids w3layouts-grids">
                             <h4 class="about-bottom-title">Адаптер Slinex VZ-10 </h4>
                             <div class="bs-docs-example">
                                 <table class="table table-bordered" style="color: grey;font-family: 'Lato',sans-serif;" >
@@ -140,7 +140,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6 ">
+                            <div class="col-md-6 col-sm-12">
 
                                 <h4 class="about-bottom-title">{{$item->model}}</h4>
 
@@ -230,7 +230,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6 ">
+                            <div class="col-md-6 col-sm-12">
 
                                 <h4 class="about-bottom-title">{{$item->model}}</h4>
 
@@ -290,7 +290,7 @@
                             {{--<nav aria-label="Page navigation ">--}}
                                 {{--{{ $iptv->links() }}--}}
                             {{--</nav>--}}
-                        @include('blog.AjaxScript')
+                        {{--@include('blog.AjaxScript')--}}
                             </div>
                     </div>
                 </div>

@@ -28,6 +28,8 @@
                         <thead>
                         <tr>
                             <th>Id</th>
+                            <th>Изображение</th>
+                            <th>Управление</th>
                             <th>Модель</th>
                             <th>Производитель</th>
                             <th>Тип</th>
@@ -40,7 +42,7 @@
                             <th>Изображение</th>
                             <th>Цена:</th>
                             <th>Категория</th>
-                            <th>Управление</th>
+
 
                         </tr>
                         </thead>
@@ -48,18 +50,7 @@
                         @foreach($iptv as $item)
                             <tr>
                                 <td>{!! $item->id !!}</td>
-                                <td>{!! $item->model !!}</td>
-                                <td>{!! $item->producer !!}</td>
-                                <td>{!! $item->type !!}</td>
-                                <td>{!! $item->processor !!}</td>
-                                <td>{!! $item->storage !!}</td>
-                                <td>{!! $item->wifi !!}</td>
-                                <td>{!! $item->interface !!}</td>
-                                <td>{!! $item->compozit !!}</td>
-                                <td>{!! $item->usb !!}</td>
-                                <td>{!! $item->images !!}</td>
-                                <td>{!! $item->price !!}</td>
-                                <td>{!! $item->category_id !!}</td>
+                                <td><img  width="70" src="/blog/img/iptv/{{$item->images}}"/></td>
                                 <td class="col-md-3">
 
                                     {{--Edit--}}
@@ -74,6 +65,18 @@
                                     </button>
 
                                 </td>
+                                <td>{!! $item->model !!}</td>
+                                <td>{!! $item->producer !!}</td>
+                                <td>{!! $item->type !!}</td>
+                                <td>{!! $item->processor !!}</td>
+                                <td>{!! $item->storage !!}</td>
+                                <td>{!! $item->wifi !!}</td>
+                                <td>{!! $item->interface !!}</td>
+                                <td>{!! $item->compozit !!}</td>
+                                <td>{!! $item->usb !!}</td>
+                                <td>{!! $item->images !!}</td>
+                                <td>{!! $item->price !!}</td>
+                                <td>{!! $item->category_id !!}</td>
                             </tr>
                         @endforeach
                         </tbody>

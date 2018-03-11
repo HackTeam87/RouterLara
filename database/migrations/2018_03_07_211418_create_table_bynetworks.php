@@ -15,20 +15,20 @@ class CreateTableBynetworks extends Migration
     {
         Schema::create('bynetworks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('model',70);
-            $table->string('producer',70);
-            $table->string('type',70);
-            $table->string('standard',70);
-            $table->string('dualBand',70);
-            $table->string('interface',70);
-            $table->string('wan',70);
-            $table->string('usb',70);
-            $table->string('storage',70);
-            $table->string('typeAntenna',70);
-            $table->string('numberAntenna',70);
+            $table->string('model',170)->nullable();
+            $table->string('producer',170)->nullable();
+            $table->string('type',170)->nullable();
+            $table->string('standart',170)->nullable();
+            $table->string('dualBand',170)->nullable();
+            $table->string('interface',170)->nullable();
+            $table->string('wan',170)->nullable();
+            $table->string('usb',170)->nullable();
+            $table->string('storage',170)->nullable();
+            $table->string('typeAntenna',170)->nullable();
+            $table->string('numberAntenna',170)->nullable();
             $table->text('text')->nullable();
             $table->string('images',100)->nullable();
-            $table->decimal('price', 5, 2)->nullable();
+            $table->integer('price', 150)->nullable();
             $table->integer('category_id')->nullable();
             $table->timestamps();
         });

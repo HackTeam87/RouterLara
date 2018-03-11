@@ -15,7 +15,7 @@
 <body>
 
 <section class="preloader">
-    {{--@include('blog._preloader')--}}
+    @include('blog._preloader')
 </section>
 
 <div class="wrapper">
@@ -37,6 +37,7 @@
     </footer>
 
 </div>
+
 
 @include('blog._script')
 

@@ -31,9 +31,9 @@
                 {{--<li><a href="{{route('category.create')}}">Категории</a></li>--}}
                 <li><a href="{{route('my.create')}}">Меню</a></li>
                 <li><a href="{{route('sli.create')}}">ТопСлайдер</a></li>
-                <li><a href="#">Домофоны</a></li>
-                <li><a href="/">Роутеры</a></li>
+                <li><a href="{{route('router.create')}}">Роутеры</a></li>
                 <li><a href="{{route('iptv.create')}}">IPTV</a></li>
+                <li><a href="#">Домофоны</a></li>
             </ul>
         </li>
     </ul>

@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Adm;
 
+use http\Env\Response;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Model\ByIptv;
 
+use Illuminate\View\View;
 use Image;
 
 class IptvController extends Controller
@@ -18,11 +20,9 @@ class IptvController extends Controller
         //считывание таблиц с базы данных
         $iptv = ByIptv::paginate(2);
 
-
-        return view('adm.iptv.create' , array(
-            'iptv' => $iptv,
-        ));
+        return View('adm.iptv.create', array('iptv' => $iptv));
     }
+
 
 
 

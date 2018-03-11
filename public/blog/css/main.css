@@ -80,22 +80,22 @@
 }
 @keyframes spinner-color {
 	0%, 100% {
-		stroke: #552d25;
+		stroke: #FF0000;
 	}
 	20% {
-		stroke: #c98a6a;
+		stroke: #003153;
 	}
 	40% {
-		stroke: #552d25;
+		stroke: #FF0000;
 	}
 	60% {
-		stroke: #c98a6a;
+		stroke: #003153;
 	}
 	80% {
-		stroke: #552d25;
+		stroke: #FF0000;
 	}
 	100% {
-		stroke: #c98a6a;
+		stroke: #003153;
 	}
 }
 @keyframes spinner-dash {

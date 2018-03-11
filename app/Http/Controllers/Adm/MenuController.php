@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers\Adm;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+
+use Request;
+use Response;
+use View;
 use App\Http\Controllers\Controller;
 use App\Model\Menu;
 use App\Model\ByNetwork;
@@ -14,20 +18,34 @@ use Image;
 class MenuController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
         $memu = Menu::all();
 
-        $networks = ByNetwork::paginate(5);
-        $iptvs = ByIptv::paginate(1);
-        $slider = Slider::paginate(5);
+        $networks = ByNetwork::all();
+        $iptv = ByIptv::paginate(1);
+        $slider = Slider::all();
 
-        return view('blog.index' , array(
-            'menu' => $memu,
-            'networks' => $networks,
-            'iptvs' => $iptvs,
-            'slider' => $slider,
+        if (Request::ajax()) {
+            return Response::json(View::make('blog.index', array(
+                'menu' => $memu,
+                'slider' => $slider,
+                'iptv' => $iptv,
+                'networks' => $networks,
+            ))->render());
+
+        }
+
+            return view('blog.index' , array(
+                'menu' => $memu,
+                'networks' => $networks,
+                'iptv' => $iptv,
+                'slider' => $slider,
             ));
+
+
+
+
     }
 
 

@@ -30,20 +30,15 @@
 
 
                 <div class="box-body pad">
-                    {!! Form::model($post,array('route' => array('posts.update',$post->id ),'files' => true,'method' => 'PATCH')) !!}
+                    {!! Form::model($menu,array('route' => array('my.update',$menu->id ),'files' => true,'method' => 'PATCH')) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
-                    <input  type="file" class="form-control btn btn-bitbucket" name="images" placeholder="Введите имя">
 
-                    <select name="category_id" class="form-control ">
-                        @foreach($category as $item)
-                            <option value="{{$item->id}}">{{$item->name}}</option>
-                        @endforeach
-                    </select>
+                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                     {!! Form::text('name',null,['class'=>'form-control ','placeholder' => 'Введите имя']) !!}
+                    {!! Form::text('alias',null,['class'=>'form-control ','placeholder' => 'Введите алиас']) !!}
 
-                    {!! Form::textarea('text',null,['class'=>'form-control ','placeholder' => 'Введите имя','id' => 'editor1']) !!}
+
 
                     {!! Form::close() !!}
 

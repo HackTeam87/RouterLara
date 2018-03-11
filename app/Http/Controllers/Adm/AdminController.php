@@ -24,7 +24,7 @@ class AdminController extends Controller
         $iptvs = ByIptv::all();
 
 
-        return view('adm.network.create' , array(
+        return view('adm.admin.create' , array(
             'menu' => $memu,
             'networks' => $networks,
             'iptvs' => $iptvs,
@@ -66,10 +66,10 @@ class AdminController extends Controller
 
     public function edit($id)
     {
-        $menus = Menu::find($id);
+        $menu = Menu::find($id);
 
 
-        return view('adm.network.edit', compact('menus'));
+        return view('adm.admin.edit', compact('menu'));
 
     }
 
@@ -79,19 +79,9 @@ class AdminController extends Controller
     {
 
         $menus = Menu::find($id);
+
         $menus->name = $request->name;
         $menus->alias = $request->alias;
-
-        if( $request->hasFile('images') ) {
-            $images = $request->file('images');
-
-            $filename = time() . '.' . $images->getClientOriginalExtension();
-
-            Image::make($images)->resize(500, 450)->save( public_path('blog/images/post/' . $filename ) );
-
-            // Set page-images url
-            $menus->images = $filename;
-        }
 
 
         $menus->save();

@@ -1,7 +1,14 @@
 <section id="product" class="text-center ">
     ﻿
     <div class="container">
-        <h3 style="margin: 20px 0 40px 0;"><b>Оборудование</b></h3>
+       <div class="row">
+           <blockquote>
+           <h3 style="margin: 70px 0 50px 0;"><b>Оборудование</b></h3>
+
+           @include('blog._cssArrow')
+
+           </blockquote>
+       </div>
         <div class="row">
 
             <div class="wizard-navigation">
@@ -17,7 +24,7 @@
 
         <div class="row">
             <div class="tab-content">
-                <div class="tab-pane active" id="small">
+                <div class="tab-pane " id="small">
                     <div class="row">
 
                         <div class="col-md-6 col-sm-12">
@@ -112,7 +119,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane" id="middle">
+                <div class="tab-pane active" id="middle">
                     <div class="row">
                         @foreach($networks as $item)
                             <div class="col-md-6 col-sm-12">
@@ -139,7 +146,7 @@
                                         <thead>
                                         </thead>
                                         <tbody>
-                                        <p>Цена: <b style="color:red; font-size:15px;">1500 грн.</b></p>
+                                        <p>Цена: <b style="color:red; font-size:15px;">{!! $item->price !!}</b></p>
                                         <tr>
                                             <td><b>Производитель:</b></td>
                                             <td>{!! $item->producer !!}</td>
@@ -169,7 +176,8 @@
                                             <td>{!! $item->usb !!}</td>
                                         </tr>
                                         <tr>
-                                            <td><b>Подключения по USB (внешний накопитель / принтер / 3G-модем):</b>
+                                            <td>
+                                                <b>Подключения по USB (внешний накопитель / принтер / 3G-модем):</b>
                                             </td>
                                             <td>{!! $item->storage !!}</td>
                                         </tr>
@@ -197,13 +205,12 @@
                     </div>
                 </div>
 
-                <nav aria-label="Page navigation ">
-                    {{ $iptvs->links() }}
-                </nav>
+
                 <div class="tab-pane" id="ipt">
 
                     <div class="row">
-                        @foreach($iptvs as $item)
+
+                        @foreach($iptv as $item)
 
                             <div class="col-md-6 col-sm-12">
 
@@ -225,51 +232,63 @@
                                 <h4 class="about-bottom-title">{{$item->model}}</h4>
 
                                 <div class="bs-docs-example">
-                                    <table class="table table-bordered" style="color:gray;font-family: 'Lato', sans-serif;">
-                                        <thead>
-                                        </thead>
-                                        <tbody>
-                                        <p>Цена: <b style="color:red; font-size:15px;">{!! $item->price !!} грн.</b></p>
 
-                                        <tr>
-                                            <td><b>Производитель:</b></td>
-                                            <td>{!! $item->producer !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Тип:</b></td>
-                                            <td>{!! $item->type !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Процессор</b></td>
-                                            <td>{!! $item->processor !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Память</b></td>
-                                            <td>{!! $item->storage!!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Wi-Fi</b></td>
-                                            <td>{!! $item->wifi !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>HDMI</b></td>
-                                            <td>{!! $item->interface !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>Композитний вход</b></td>
-                                            <td>{!! $item->compozit !!}</td>
-                                        </tr>
-                                        <tr>
-                                            <td><b>USB:</b></td>
-                                            <td>{!! $item->usb !!}</td>
-                                        </tr>
 
-                                        </tbody>
-                                    </table>
+                                        <table class="table table-bordered" style="color:gray;font-family: 'Lato', sans-serif;">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                            <p>Цена: <b style="color:red; font-size:15px;">{!! $item->price !!} грн.</b></p>
+
+                                            <tr>
+                                                <td><b>Производитель:</b></td>
+                                                <td>{!! $item->producer !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Тип:</b></td>
+                                                <td>{!! $item->type !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Процессор</b></td>
+                                                <td>{!! $item->processor !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Память</b></td>
+                                                <td>{!! $item->storage!!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Wi-Fi</b></td>
+                                                <td>{!! $item->wifi !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>HDMI</b></td>
+                                                <td>{!! $item->interface !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Композитний вход</b></td>
+                                                <td>{!! $item->compozit !!}</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>USB:</b></td>
+                                                <td>{!! $item->usb !!}</td>
+                                            </tr>
+
+                                            </tbody>
+                                        </table>
+
+
+
+
                                 </div>
 
                             </div>
                         @endforeach
+                            <div class="iptv">
+                            {{--<nav aria-label="Page navigation ">--}}
+                                {{--{{ $iptv->links() }}--}}
+                            {{--</nav>--}}
+                        @include('blog.AjaxScript')
+                            </div>
                     </div>
                 </div>
 
@@ -280,4 +299,4 @@
     </div>
 
 
-</section>
+</section>`

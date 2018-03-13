@@ -96,7 +96,7 @@
 
                     {!! Form::open(['route'=>'sli.store','files' => true]) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm ']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm ']) !!}
 
                         <input type="file" name="images" class="form-control btn btn-primary">
 

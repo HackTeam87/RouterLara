@@ -133,7 +133,7 @@
 
                     {!! Form::open(['route'=>'router.store','files' => true]) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                     <input type="file" name="images" class="form-control btn btn-primary">
 
@@ -146,14 +146,24 @@
                     <input type="text" class="form-control" name="interface"
                            placeholder="Интерфейс подключения (LAN-порт):">
                     <input type="text" class="form-control" name="wan" placeholder="Вход (WAN-порт):">
-                    <input type="text" class="form-control" name="usb" placeholder="USB:">
                     <input type="text" class="form-control" name="storage"
                            placeholder="Подключения по USB (внешний накопитель / принтер / 3G-модем):">
                     <input type="text" class="form-control" name="typeAntenna" placeholder="Тип антени (внутр / зовн):">
                     <input type="text" class="form-control" name="numberAntenna" placeholder="Количество антен:">
-                    <input type="text" class="form-control" name="text" placeholder="Описание:">
-                    <input type="text" class="form-control" name="price" placeholder="Цена">
-                    <input type="text" class="form-control" name="category_id" placeholder="Категория">
+                    {!! Form::text('price',null ,['class'=>'form-control' ,'placeholder' => 'Цена']) !!}
+                    <input type="text" class="form-control" name="usb" placeholder="USB:">
+
+                    <select name="category_id" id="" class="form-control">
+                        <option disabled>Выберите категорию</option>
+                    </select>
+
+
+                    {!! Form::textarea('text',null,['class'=>'form-control','id'=>'editor1','placeholder' => 'Описание']) !!}
+
+
+                   {{--{!!  Form::select('size',['class'=>'form-control'], array('1' => 'роутеры')) !!}--}}
+
+
 
                     {!! Form::close() !!}
 

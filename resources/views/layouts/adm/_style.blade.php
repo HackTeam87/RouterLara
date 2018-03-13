@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="{{asset('adm/css/AdminLTE.min.css')}}">
 
 <link rel="stylesheet" href="{{asset('adm/css/skins/skin-blue.min.css')}}">
-<link rel="stylesheet" href="{{asset('adm/bg/bg.css')}}">
+{{--<link rel="stylesheet" href="{{asset('adm/bg/bg.css')}}">--}}
 
 
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>

@@ -33,7 +33,7 @@
 
                                 <div class="col-xs-2 aboutagile-grid">
 
-                                    <img  width="300" src="{{asset('/blog/img/domofon/adapter.jpg')}}"/>
+                                    <img  width="300" src="{{asset('/blog/img/domofon/adapter.jpg')}}" style="padding: 0 50px 0 0;"/>
 
                                 </div>
 
@@ -76,7 +76,7 @@
                         <div class="col-md-6 about-bottom-g1">
                             <div class=" about-bottom-right">
                                 <div class="col-xs-2 aboutagile-grid">
-                                    <img style="margin-left:135px;" width="300" src="{{asset('/blog/img/domofon/trubka1.jpg')}}" />
+                                    <img style="margin-left:135px;" width="300" src="{{asset('/blog/img/domofon/trubka1.jpg')}}" style="padding: 0 50px 0 0;"/>
                                 </div>
 
                                 <div class="clearfix"> </div>
@@ -132,7 +132,7 @@
                                     <div class="col-xs-2 aboutagile-grid">
 
                                         <img  width="450"
-                                             src="blog/img/routers/{{$item->images}}"/>
+                                             src="blog/img/routers/{{$item->images}}" style="padding: 0 50px 0 0;"/>
 
                                     </div>
 
@@ -222,7 +222,7 @@
                                     <div class="col-xs-2 aboutagile-grid">
 
                                         <img  width="450"
-                                             src="/blog/img/iptv/{{$item->images}}"/>
+                                             src="/blog/img/iptv/{{$item->images}}" style="padding: 0 50px 0 0;"/>
 
                                     </div>
 

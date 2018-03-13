@@ -33,7 +33,7 @@
                 <li><a href="{{route('sli.create')}}"><i class="fa fa-share-square"></i>ТопСлайдер</a></li>
                 <li><a href="{{route('router.create')}}"><i class="fa fa-wifi"></i>Роутеры</a></li>
                 <li><a href="{{route('iptv.create')}}"><i class="fa fa-tv"></i>IPTV</a></li>
-                <li><a href="#">Домофоны</a></li>
+                <li><a href="#"><i class="fa fa-phone"></i>Домофоны</a></li>
             </ul>
         </li>
     </ul>

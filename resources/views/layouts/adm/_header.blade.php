@@ -1,8 +1,8 @@
 <a href="/" class="logo">
 
-    <span class="logo-mini"><b>A</b>LT</span>
+    <span class="logo-mini"><b>A</b>DM</span>
 
-    <span class="logo-lg"><b>Admin</b>GRIN</span>
+    <span class="logo-lg"><b>Adm</b></span>
 </a>
 <nav class="navbar navbar-static-top" role="navigation">
 

@@ -17,6 +17,8 @@
                     <h3 class="box-title">
                         <small>Input Form</small>
                     </h3>
+                    <br>
+                    {!! link_to(route('my.create'), 'Back') !!}
 
                     <div class="pull-right box-tools">
                         <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
@@ -33,7 +35,7 @@
                     {!! Form::model($menu,array('route' => array('my.update',$menu->id ),'files' => true,'method' => 'PATCH')) !!}
                     {{ csrf_field() }}
 
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                     {!! Form::text('name',null,['class'=>'form-control ','placeholder' => 'Введите имя']) !!}
                     {!! Form::text('alias',null,['class'=>'form-control ','placeholder' => 'Введите алиас']) !!}

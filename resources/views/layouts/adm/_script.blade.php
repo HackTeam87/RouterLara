@@ -6,11 +6,4 @@
 
 <script src="{{asset('adm/js/ckeditor/ckeditor.js')}}"></script>
 
-<script>
-    $(function () {
-
-        CKEDITOR.replace('editor1')
-
-        $('.textarea').wysihtml5()
-    })
-</script>
+<script src="{{asset('blog/js/editor.js')}}" type="text/javascript"></script>

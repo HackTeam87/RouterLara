@@ -8,7 +8,7 @@
         // Site loader 
 
         $(".loader-inner").fadeOut();
-        $(".loader").delay(200).fadeOut("slow");
+        $(".loader").delay(120).fadeOut("slow");
 
     });
 
@@ -63,20 +63,22 @@
     $('.main-slider').flexslider({
         animation: "fade",
         slideshow: true,
-        directionNav: true,
+        directionNav: false,
         controlNav: true,
         pauseOnAction: false,
-        animationSpeed: 500
+        animationSpeed: 400,
+        captions: true,
     });
 
 
     $('.review-slider').flexslider({
-        animation: "slide",
+        animation: "fade",
         slideshow: true,
-        directionNav: true,
+        directionNav: false,
         controlNav: false,
         pauseOnAction: false,
-        animationSpeed: 500
+        animationSpeed: 400,
+        captions: true,
     });
 
 
@@ -141,19 +143,7 @@
 
 
 
-
-    // Instagram feed setup
-    var instaFeed = new Instafeed({
-        get: 'user',
-        userId: '6366233572',
-        accessToken: '6366233572.66a2324.a32ba61504e041da93f98ed3905039fb',
-        limit: 10,
-        resolution: 'standard_resolution',
-        template: '<li><a href="{{link}}"><img src="{{image}}"/></a></li>'
-    });
-    instaFeed.run();
-
-
-
-
 })(jQuery);
+
+
+

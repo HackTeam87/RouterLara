@@ -32,7 +32,7 @@
                 <div class="box-body pad">
                     {!! Form::model($slider,array('route' => array('sli.update',$slider->id ),'files' => true,'method' => 'PATCH')) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
                     <input  type="file" class="form-control btn btn-bitbucket" name="images" placeholder="Введите имя">
 
 

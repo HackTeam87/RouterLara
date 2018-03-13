@@ -8,7 +8,7 @@
 
     </section>
 
-    <section class="content container-fluid">
+    <section class="content container">
 
         <div class="col-md-8">
 

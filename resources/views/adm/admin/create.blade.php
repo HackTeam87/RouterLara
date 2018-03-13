@@ -96,7 +96,7 @@
 
                     {!! Form::open(['route'=>'my.store','files' => true]) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                         <input type="text" class="form-control" name="name" placeholder="Введите имя">
                         <input type="text" class="form-control" name="alias" placeholder="Введите алиас">

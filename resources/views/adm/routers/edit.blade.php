@@ -18,6 +18,9 @@
                         <small>Input Form</small>
                     </h3>
 
+                    <br>
+                    {!! link_to(route('router.create'), 'Back') !!}
+
                     <div class="pull-right box-tools">
                         <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
                                 title="Collapse">
@@ -32,7 +35,7 @@
                 <div class="box-body pad">
                     {!! Form::model($router,array('route' => array('router.update',$router->id ),'files' => true,'method' => 'PATCH')) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                     <input  type="file" class="form-control btn btn-bitbucket" name="images" placeholder="Изображение">
 
@@ -50,7 +53,14 @@
                     {!! Form::text('numberAntenna',null ,['class'=>'form-control' ,'placeholder' => 'Количество антен:']) !!}
                     {!! Form::text('text',null ,['class'=>'form-control' ,'placeholder' => 'Описание:']) !!}
                     {!! Form::text('price',null ,['class'=>'form-control' ,'placeholder' => 'Цена']) !!}
-                    {!! Form::text('category_id',null ,['class'=>'form-control' ,'placeholder' => 'Категория']) !!}
+
+
+                    <select name="category_id" id="" class="form-control"   placeholder="Категория">
+                        <option disabled>Выберите категорию</option>
+                    </select>
+
+
+                    {!! Form::textarea('text',null,['class'=>'form-control','id'=>'editor1','placeholder' => 'Описание']) !!}
 
 
                     {!! Form::close() !!}

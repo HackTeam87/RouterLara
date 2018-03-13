@@ -126,7 +126,7 @@
 
                     {!! Form::open(['route'=>'iptv.store','files' => true]) !!}
                     {{ csrf_field() }}
-                    {!! Form::submit('send form',['class'=>'btn btn-primary btn-sm buttonText']) !!}
+                    {!! Form::submit('Отправить',['class'=>'btn btn-primary btn-sm buttonText']) !!}
 
                     <input type="file" name="images" class="form-control btn btn-primary">
 
@@ -141,7 +141,13 @@
                     <input type="text" class="form-control" name="usb" placeholder="Usb">
                     <input type="text" class="form-control" name="images" placeholder="Изображение">
                     <input type="text" class="form-control" name="price" placeholder="Цена">
-                    <input type="text" class="form-control" name="category_id" placeholder="Категория">
+
+
+                    <select name="category_id" id="" class="form-control" >
+                        <option disabled>Выберите категорию</option>
+                    </select>
+
+                    {!! Form::textarea('text',null,['class'=>'form-control','id'=>'editor1','placeholder' => 'Описание']) !!}
 
                     {!! Form::close() !!}
 
